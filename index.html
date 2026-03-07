@@ -7,19 +7,7 @@
 
 <body>
 
-    <script src="js/quiz.js"></script> 
-    <script src="js/u1.js"></script>
-    <script src="js/u2.js"></script>
-    <script src="js/u3.js"></script>
-    <script src="js/u4.js"></script>
-    <script src="js/u5.js"></script>
-    <script src="js/u6.js"></script>
-    <script src="js/u7.js"></script>
-    <script src="js/u8.js"></script>
-    <script src="js/u9.js"></script>
 
-
-    <script src="js/script.js"></script>
 
     <div id="header">
         <strong>Practice for APCS Exam</strong>
@@ -31,16 +19,39 @@
     </div>
 
     <div id="units">
-        <button id="u1">Unit 1 - Digital Information</button>
-        <button id="u2">Unit 2 - The Internet</button>
-        <button id="u3">Unit 3 - Intro to App Design</button>
-        <button id="u4">Unit 4 - Variables, Conditionals, and Functions</button>
-        <button id="u5">Unit 5 - Data</button>
-        <button id="u6">Unit 6 - Lists, Loops, and Traversals</button>
-        <button id="u7">Unit 7 - Parameters, Return, and Libraries</button>
-        <button id="u8">Unit 8 - Cybersecurity and Global Impacts</button>
-        <button id="u9">Unit 9 - Algorithms</button>
+        <button onclick="startQuiz('U1')">Unit 1 - Digital Information</button>
+        <button onclick="startQuiz('U2')">Unit 2 - The Internet</button>
+        <button onclick="startQuiz('U3')">Unit 3 - Intro to App Design</button>
+        <button onclick="startQuiz('U4')">Unit 4 - Variables, Conditionals, and Functions</button>
+        <button onclick="startQuiz('U5')">Unit 5 - Data</button>
+        <button onclick="startQuiz('U6')">Unit 6 - Lists, Loops, and Traversals</button>
+        <button onclick="startQuiz('U7')">Unit 7 - Parameters, Return, and Libraries</button>
+        <button onclick="startQuiz('U8')">Unit 8 - Cybersecurity and Global Impacts</button>
+        <button onclick="startQuiz('U9')">Unit 9 - Algorithms</button>
+    </div>
+    <div id="quiz" style="display:none">
+    <div id="qNumber"></div>
+    <div id="qText"></div>
+    <div id="answers">
+        <button id="a0"></button>
+        <button id="a1"></button>
+        <button id="a2"></button>
+        <button id="a3"></button>
     </div>
 
+</div>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/u1.js"></script>
+    <script src="js/u2.js"></script>
+    <script src="js/u3.js"></script>
+    <script src="js/u4.js"></script>
+    <script src="js/u5.js"></script>
+    <script src="js/u6.js"></script>
+    <script src="js/u7.js"></script>
+    <script src="js/u8.js"></script>
+    <script src="js/u9.js"></script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
