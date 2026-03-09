@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U7 = {
+    name: "Unit 7: Parameters, Return Values, and Libraries",
+    description: 
+    "This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing."
+}
 quiz.U7 = [
     {
         text: "What is a parameter in a function?",

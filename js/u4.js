@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U4 = {
+    name: "Unit 4: Variables and Conditionals",
+    description: 
+    "This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision."
+}
 quiz.U4 = [
     {
         text: "What is a variable used for in programming?",

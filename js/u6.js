@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U6 = {
+    name: "Unit 6: Lists and Loops",
+    description: 
+    "This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing."
+}
 quiz.U6 = [
     {
         text: "What is a list in App Lab?",

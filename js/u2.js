@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U2 = {
+    name: "Unit 2: The Internet",
+    description: 
+    "This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life."
+}
 quiz.U2 = [{
         text: "What is the main purpose of the Internet?",
         choices: [

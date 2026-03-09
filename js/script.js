@@ -2,6 +2,7 @@ let currentQuestions = [];
 let currentIndex = 0;
 let score = 0;
 function startQuiz(unit) {
+    document.getElementById("unitInfo").style.display = "none";
     currentQuestions = quiz[unit];
     currentIndex = 0;
     score = 0;
@@ -40,6 +41,8 @@ function checkAnswer(choice){
         document.getElementById("wrongAnswer").style.display = "block";
         document.getElementById("correctAnswer").textContent = q.choices[q.answer];
         document.getElementById("okButtonDiv").style.display = "block";
+        document.getElementById("a" + q.answer).style.backgroundColor = "lightgreen";
+        document.getElementById("a" + choice).style.backgroundColor = "salmon";
         document.getElementById("okButton").onclick = () => plusIndex();
     }
 }
@@ -47,11 +50,24 @@ function plusIndex(){
     currentIndex++;
     document.getElementById("wrongAnswer").style.display = "none";
     document.getElementById("okButtonDiv").style.display = "none";
+    document.getElementById("a0").style.backgroundColor = "white";
+    document.getElementById("a1").style.backgroundColor = "white";
+    document.getElementById("a2").style.backgroundColor = "white";
+    document.getElementById("a3").style.backgroundColor = "white";
     if(currentIndex < 15){
         showQuestion();
     } else {
         document.getElementById("quiz").style.display = "none";
         document.getElementById('results').style.display = 'block';
         document.getElementById('score').textContent = score;
+      
     }
+}
+function showUnitInfo(unit){
+    document.getElementById("units").style.display = "none";
+    document.getElementById("choose").style.display = "none";
+    document.getElementById("unitInfo").style.display = "block";
+    document.getElementById("unitName").textContent = info[unit].name;
+    document.getElementById("unitDescription").textContent = info[unit].description;
+    document.getElementById("startQuizButton").onclick = () => startQuiz(unit);
 }

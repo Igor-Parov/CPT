@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U9 = {
+    name: "Unit 9: Algorithms",
+    description: 
+    "This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing."
+}
 quiz.U9 = [
     {
         text: "What is an algorithm?",

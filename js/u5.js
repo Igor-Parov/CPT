@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U5 = {
+    name: "Unit 5: Data and Analysis",
+    description: 
+    "In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you'll analyze a dataset of your choosing and present your findings."
+}
 quiz.U5 = [
     {
         text: "What is data?",

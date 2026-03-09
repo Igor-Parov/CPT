@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U3 = {
+    name: "Unit 3: App Design and Development",
+    description: 
+    "This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing."
+}
 quiz.U3 = [{
         text: "What type of programming is primarily used in App Lab?",
         choices: [

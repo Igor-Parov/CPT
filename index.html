@@ -19,15 +19,20 @@
     </div>
 
     <div id="units">
-        <button onclick="startQuiz('U1')">Unit 1 - Digital Information</button>
-        <button onclick="startQuiz('U2')">Unit 2 - The Internet</button>
-        <button onclick="startQuiz('U3')">Unit 3 - Intro to App Design</button>
-        <button onclick="startQuiz('U4')">Unit 4 - Variables, Conditionals, and Functions</button>
-        <button onclick="startQuiz('U5')">Unit 5 - Data</button>
-        <button onclick="startQuiz('U6')">Unit 6 - Lists, Loops, and Traversals</button>
-        <button onclick="startQuiz('U7')">Unit 7 - Parameters, Return, and Libraries</button>
-        <button onclick="startQuiz('U8')">Unit 8 - Cybersecurity and Global Impacts</button>
-        <button onclick="startQuiz('U9')">Unit 9 - Algorithms</button>
+        <button onclick="showUnitInfo('U1')">Unit 1 - Digital Information</button>
+        <button onclick="showUnitInfo('U2')">Unit 2 - The Internet</button>
+        <button onclick="showUnitInfo('U3')">Unit 3 - Intro to App Design</button>
+        <button onclick="showUnitInfo('U4')">Unit 4 - Variables, Conditionals, and Functions</button>
+        <button onclick="showUnitInfo('U5')">Unit 5 - Data</button>
+        <button onclick="showUnitInfo('U6')">Unit 6 - Lists, Loops, and Traversals</button>
+        <button onclick="showUnitInfo('U7')">Unit 7 - Parameters, Return, and Libraries</button>
+        <button onclick="showUnitInfo('U8')">Unit 8 - Cybersecurity and Global Impacts</button>
+        <button onclick="showUnitInfo('U9')">Unit 9 - Algorithms</button>
+    </div>
+    <div id="unitInfo" style="display:none">
+        <h2 id="unitName"></h2>
+        <p id="unitDescription"></p>
+        <button id="startQuizButton">Start Quiz</button>
     </div>
     <div id="quiz" style="display:none">
     <div id="qNumber"></div>
@@ -48,10 +53,12 @@
         <div id ="results" style="display:none">
         <h2>Quiz Results</h2>
         <p>Your score is: <span id="score">0</span>/15</p>
-        <button onclick="location.reload()">Try Again</button>
+        <button onclick="location.reload()">Start Over</button>
+        
     </div>
 
     <script src="js/quiz.js"></script>
+    <script src="js/info.js"></script>
     <script src="js/u1.js"></script>
     <script src="js/u2.js"></script>
     <script src="js/u3.js"></script>

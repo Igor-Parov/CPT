@@ -14,6 +14,11 @@
    }
    ];
 */ 
+info.U1 = {
+    name: "Unit 1: Digital Information",
+    description: 
+    "This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information."
+}
 quiz.U1 = [{
             text: "Why do computers use binary to represent information?",
             choices: [
