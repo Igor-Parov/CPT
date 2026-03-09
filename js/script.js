@@ -29,6 +29,7 @@ function checkAnswer(choice){
     if(choice == q.answer){
         score++;
         currentIndex++;
+        reset();
         if(currentIndex < 15){
             showQuestion();
         } else {
@@ -48,12 +49,7 @@ function checkAnswer(choice){
 }
 function plusIndex(){
     currentIndex++;
-    document.getElementById("wrongAnswer").style.display = "none";
-    document.getElementById("okButtonDiv").style.display = "none";
-    document.getElementById("a0").style.backgroundColor = "white";
-    document.getElementById("a1").style.backgroundColor = "white";
-    document.getElementById("a2").style.backgroundColor = "white";
-    document.getElementById("a3").style.backgroundColor = "white";
+    reset();
     if(currentIndex < 15){
         showQuestion();
     } else {
@@ -70,4 +66,15 @@ function showUnitInfo(unit){
     document.getElementById("unitName").textContent = info[unit].name;
     document.getElementById("unitDescription").textContent = info[unit].description;
     document.getElementById("startQuizButton").onclick = () => startQuiz(unit);
+    document.getElementById("backButton").onclick = () => {
+        location.reload()
+    }
+}
+function reset(){
+    document.getElementById("wrongAnswer").style.display = "none";
+    document.getElementById("okButtonDiv").style.display = "none";
+    document.getElementById("a0").style.backgroundColor = "white";
+    document.getElementById("a1").style.backgroundColor = "white";
+    document.getElementById("a2").style.backgroundColor = "white";
+    document.getElementById("a3").style.backgroundColor = "white";
 }
