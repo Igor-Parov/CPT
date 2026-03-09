@@ -154,5 +154,15 @@ quiz.U5 = [
             "Avoid using visualizations"
         ],
         answer: 1
+    },
+    {
+        text: "What is a trend in data analysis?",
+        choices: [
+            "A sudden change in data",
+            "A general direction or pattern over time",
+            "A single data point",
+            "An error in the dataset"
+        ],
+        answer: 1
     }
 ];
