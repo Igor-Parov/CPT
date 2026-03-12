@@ -2,6 +2,7 @@ body {
   display: block;
   text-align: center;
   font-size:30px;  
+  width: 99.5%;
   
 }
 #units {
@@ -11,6 +12,9 @@ body {
   grid-template-columns: repeat(3,1fr);
   justify-content: center;
   align-items: center;
+  width: 1200px;
+  margin: 0 auto;  
+  margin-top: 70px; 
 }
 
 #units button {
@@ -18,4 +22,8 @@ body {
   margin: 20px;
   height:100px;
   width: 250px;
+  
+}
+#units button:hover{
+  cursor: pointer;
 }
