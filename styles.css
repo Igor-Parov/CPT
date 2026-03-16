@@ -3,6 +3,8 @@ body {
   text-align: center;
   font-size:30px;  
   width: 99.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image:
   
 }
 #units {
@@ -15,6 +17,8 @@ body {
   width: 1200px;
   margin: 0 auto;  
   margin-top: 70px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 #units button {
@@ -26,4 +30,20 @@ body {
 }
 #units button:hover{
   cursor: pointer;
+
+}
+button {
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#unitDescription {
+  font-size: 20px;
+  margin-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+button:hover {
+  background-color: #b8b5b5;
 }

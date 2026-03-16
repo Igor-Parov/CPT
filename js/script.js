@@ -117,6 +117,8 @@ function plusIndex(){
         document.getElementById("quiz").style.display = "none";
         document.getElementById('results').style.display = 'block';
         document.getElementById('score').textContent = score;
+        var percentage = Math.round((score / 15) * 100);
+        document.getElementById('percentage').textContent = percentage + '%';
     }
 }
 
