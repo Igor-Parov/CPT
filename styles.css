@@ -54,10 +54,9 @@ button {
   
 }
 #a0, #a1, #a2, #a3 {
+  height: 220px;
   color: white;
   font-size: 36px;
-  height:150px;
-  width: 745px;
   box-sizing: border-box;
   margin: 5px;
   box-shadow: 0 6px #3c6179;
@@ -75,4 +74,65 @@ button {
 #a0:active, #a1:active, #a2:active, #a3:active {
   transform: translateY(6px);
   box-shadow: 0 0 #3c6179;
+}
+#qText {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300px absolute;
+  font-size: 45px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 50vh; 
+}
+#qNumber {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+#okButtonDiv {
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#correctAnswer {
+  position: relative;
+  margin-top: -200px;
+  font-size: 18px;
+  color: rgb(6, 145, 64);
+  border: none;
+  border-radius: 5px;
+}
+#wrongAnswer {
+  position: relative;
+  margin-top: -200px;
+  font-size: 18px;
+  color: rgb(165, 26, 26);
+  border: none;
+  border-radius: 5px;
+}
+#backToUnitsButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #5588aa;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+#backToUnitsButton:hover {
+  background-color: #6a94af;
+}
+#okButton {
+  background-color: #5588aa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+#okButton:hover {
+  background-color: #6a94af;
 }
