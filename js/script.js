@@ -151,10 +151,10 @@ function reset(){
     document.getElementById("okButtonDiv").style.display = "none";
 
     // reset button colors
-    document.getElementById("a0").style.backgroundColor = "white";
-    document.getElementById("a1").style.backgroundColor = "white";
-    document.getElementById("a2").style.backgroundColor = "white";
-    document.getElementById("a3").style.backgroundColor = "white";
+    document.getElementById("a0").style.backgroundColor = "#5588aa";
+    document.getElementById("a1").style.backgroundColor = "#5588aa";
+    document.getElementById("a2").style.backgroundColor = "#5588aa";
+    document.getElementById("a3").style.backgroundColor = "#5588aa";
 }
 
 // disables answer buttons
