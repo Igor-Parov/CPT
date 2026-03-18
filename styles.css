@@ -7,7 +7,8 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   background-position: center;
-  background-size: cover;
+  
+  
 }
 #units {
   text-align: center;
@@ -19,19 +20,21 @@ body {
   width: 1200px;
   margin: 0 auto;  
   margin-top: 70px; 
+  background-color: rgba(255, 255, 255, 0.5);
   
 }
 
 #units button {
   font-size: 25px;
   margin: 20px;
-  height:100px;
-  width: 250px;
+  height:120px;
+  width: 300px;
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
 }
 #units button:hover{
   cursor: pointer;
+  background-color: rgba(153, 151, 151, 0.5);
 
 }
 button {
@@ -45,7 +48,7 @@ button {
   margin: 50px;
   color: #ffffff;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 
 }
 
@@ -153,6 +156,7 @@ button {
   align-items: center;     
   height: 50vh; 
   color: #ffffff;
+  
 }
 #qNumber {
   font-size: 35px;
