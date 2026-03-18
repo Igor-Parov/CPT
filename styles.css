@@ -6,7 +6,8 @@ body {
   width: 99.5%;
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  
+  background-position: center;
+  background-size: cover;
 }
 #units {
   text-align: center;
@@ -18,7 +19,7 @@ body {
   width: 1200px;
   margin: 0 auto;  
   margin-top: 70px; 
-
+  
 }
 
 #units button {
@@ -26,7 +27,8 @@ body {
   margin: 20px;
   height:100px;
   width: 250px;
-  
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
 }
 #units button:hover{
   cursor: pointer;
@@ -37,24 +39,32 @@ button {
 
 }
 #unitDescription {
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 50px;
   text-align: center;
   margin: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+
 }
 
 #answers {
   display: grid;
-  grid-template-columns: repeat(2,2fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  width: 100%;
-  
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 10px;
+  z-index: 10;
 }
+
 #a0, #a1, #a2, #a3 {
-  height: 220px;
+  min-height: 200px;
   color: white;
   font-size: 36px;
   box-sizing: border-box;
@@ -64,7 +74,66 @@ button {
   background-color: #5588aa;
   border-radius: 15px;
   position: relative;
-  
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+@media (max-width: 1000px) {
+  #units {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 800px);
+  }
+
+  #answers {
+    grid-template-columns: 1fr;
+    position: static;
+    padding: 15px;
+  }
+
+  #a0, #a1, #a2, #a3 {
+    min-height: 160px;
+    font-size: 28px;
+  }
+
+  #qText {
+    font-size: 32px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #units {
+    grid-template-columns: 1fr;
+    width: min(100%, 400px);
+    margin-top: 40px;
+  }
+
+  #units button {
+    width: 100%;
+    margin: 8px 0;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  #qText {
+    font-size: 24px;
+    height: auto;
+  }
+
+  #a0, #a1, #a2, #a3 {
+    min-height: 120px;
+    font-size: 22px;
+  }
+
+  #backToUnitsButton, #okButton, #backToUnitsButton:hover, #okButton:hover {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
 #a0:hover, #a1:hover, #a2:hover, #a3:hover {
   background-color: #6a94af;
@@ -83,34 +152,51 @@ button {
   justify-content: center; 
   align-items: center;     
   height: 50vh; 
+  color: #ffffff;
 }
 #qNumber {
-  font-size: 18px;
-  color: #333;
+  font-size: 35px;
+  color: #ffffff;
   margin-bottom: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top:100px;
+  font-weight: bold;
 }
 #okButtonDiv {
   font-size: 18px;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  position: fixed;
+  bottom: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px 12px;
+}
+#correctAnswer,
+#wrongAnswer {
+  position: fixed;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.95);
+  padding: 8px 12px;
+  z-index: 25;
 }
 #correctAnswer {
-  position: relative;
-  margin-top: -200px;
-  font-size: 18px;
   color: rgb(6, 145, 64);
-  border: none;
-  border-radius: 5px;
 }
 #wrongAnswer {
-  position: relative;
-  margin-top: -200px;
-  font-size: 18px;
   color: rgb(165, 26, 26);
-  border: none;
-  border-radius: 5px;
 }
 #backToUnitsButton {
   position: absolute;
@@ -122,17 +208,144 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
+  z-index: 30;
 }
 #backToUnitsButton:hover {
   background-color: #6a94af;
 }
 #okButton {
-  background-color: #5588aa;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
 }
 #okButton:hover {
+  background-color: #b2b4b5;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100; 
+    object-fit: cover; 
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  z-index: 20;
+  font: 40px 'Nunito', sans-serif;
+}
+#choose{
+  position: relative;
+  top: 50px;
+  color: #ffffff;
+  font-size: 34px;
+}
+#startQuizButton {
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #5588aa;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+#backButton {
+  font-size: 25px;
+  color: white;
+  background-color: #5588aa;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+#backButton:hover {
   background-color: #6a94af;
+}
+
+/* Quiz results panel styling */
+#results {
+  display: none;
+  width: min(90%, 600px);
+  margin: 30px auto 80px;
+  background: linear-gradient(145deg, rgba(0, 64, 120, 0.85), rgba(12, 125, 190, 0.95));
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  padding: 24px 20px;
+  z-index: 30;
+  position: relative;
+  top:100px;
+}
+
+#results h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+#results p {
+  font-size: 1.4rem;
+  margin: 0.25rem 0 0.5rem;
+  font-weight: 700;
+}
+
+#results span#score,
+#results span#percentage {
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-left: 0.35rem;
+  color: #ffff77;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+
+#results button {
+  margin-top: 1rem;
+  width: 160px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #08335f;
+  background: #f8f9ff;
+  border: solid 2px #ffffff;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#results button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 700px) {
+  #results {
+    width: min(100%, 98vw);
+    margin: 20px auto 70px;
+    padding: 18px 14px;
+  }
+
+  #results h2 {
+    font-size: 1.7rem;
+  }
+
+  #results p {
+    font-size: 1.1rem;
+  }
+
+  #results span#score,
+  #results span#percentage {
+    font-size: 1.8rem;
+  }
+
+  #results button {
+    width: 100%;
+  }
 }
