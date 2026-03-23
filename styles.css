@@ -31,6 +31,7 @@ body {
   width: 300px;
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
+  border-radius: 15px;
 }
 #units button:hover{
   cursor: pointer;
@@ -46,7 +47,7 @@ button {
   margin-top: 50px;
   text-align: center;
   margin: 50px;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.7);
 
@@ -156,7 +157,8 @@ button {
   align-items: center;     
   height: 50vh; 
   color: #ffffff;
-  
+  -webkit-text-stroke-color: rgb(0, 2, 11);
+  -webkit-text-stroke-width: 1px;
 }
 #qNumber {
   font-size: 35px;
