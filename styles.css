@@ -50,10 +50,12 @@ button {
   color: #000000;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
 
 }
 
 #answers {
+  
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
@@ -159,6 +161,7 @@ button {
   color: #ffffff;
   -webkit-text-stroke-color: rgb(0, 2, 11);
   -webkit-text-stroke-width: 1px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 #qNumber {
   font-size: 35px;
@@ -170,6 +173,7 @@ button {
   position: relative;
   top:100px;
   font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 #okButtonDiv {
   font-size: 18px;
@@ -253,6 +257,7 @@ button {
   top: 50px;
   color: #ffffff;
   font-size: 34px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 #startQuizButton {
   font-size: 25px;
