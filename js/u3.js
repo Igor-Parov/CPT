@@ -128,7 +128,7 @@ quiz.U3 = [
       "Designing the user interface",
       "Writing JavaScript code"
     ],
-    answer: 3
+    answer: 2
   },
   {
     text: "What does an onEvent() block do in App Lab?",
@@ -138,7 +138,7 @@ quiz.U3 = [
       "Creates a new screen",
       "Runs code when a specific event happens"
     ],
-    answer: 2
+    answer: 3
   },
   {
     text: "What is a variable used for in an app?",
@@ -148,7 +148,7 @@ quiz.U3 = [
       "To create images",
       "To stop the program"
     ],
-    answer: 1
+    answer: 0
   },
   {
     text: "What makes a user interface (UI) effective?",
@@ -168,6 +168,6 @@ quiz.U3 = [
       "Replace all other apps",
       "Teach classmates about a topic of your choice"
     ],
-    answer: 2
+    answer: 3
   }
 ];

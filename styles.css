@@ -279,7 +279,7 @@ button {
   background-color: #6a94af;
 }
 
-/* Quiz results panel styling */
+
 #results {
   display: none;
   width: min(90%, 600px);
@@ -358,4 +358,26 @@ button {
   #results button {
     width: 100%;
   }
+}
+#toggleVideoBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: rgba(97, 92, 92, 0.85);
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+}
+#toggleVideoBtn:hover {
+  background-color: rgba(153, 146, 146, 0.651);
+}
+
+#pauseVideoBtn,
+#playVideoBtn {
+  display: none;
 }

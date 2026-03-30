@@ -173,35 +173,17 @@ function enableButtons(){
     document.getElementById("a3").disabled = false;
 }
 
-// video control buttons (start/pause/toggle)
+// video control button (single toggle)
 const bgVideo = document.getElementById('bgVideo');
-const pauseVideoBtn = document.getElementById('pauseVideoBtn');
-const playVideoBtn = document.getElementById('playVideoBtn');
 const toggleVideoBtn = document.getElementById('toggleVideoBtn');
 
-if (bgVideo) {
-    function updateVideoButtons() {
-        if (bgVideo.paused) {
-            pauseVideoBtn.style.display = 'none';
-            playVideoBtn.style.display = 'inline-block';
-            toggleVideoBtn.textContent = 'Play Video';
-        } else {
-            pauseVideoBtn.style.display = 'inline-block';
-            playVideoBtn.style.display = 'none';
-            toggleVideoBtn.textContent = 'Pause Video';
-        }
+if (bgVideo && toggleVideoBtn) {
+    function updateVideoButtonLabel() {
+        toggleVideoBtn.textContent = bgVideo.paused ? 'Play Video' : 'Pause Video';
     }
 
-    bgVideo.addEventListener('play', updateVideoButtons);
-    bgVideo.addEventListener('pause', updateVideoButtons);
-
-    pauseVideoBtn.addEventListener('click', () => {
-        bgVideo.pause();
-    });
-
-    playVideoBtn.addEventListener('click', () => {
-        bgVideo.play().catch(err => console.warn('Autoplay play blocked:', err));
-    });
+    bgVideo.addEventListener('play', updateVideoButtonLabel);
+    bgVideo.addEventListener('pause', updateVideoButtonLabel);
 
     toggleVideoBtn.addEventListener('click', () => {
         if (bgVideo.paused) {
@@ -211,5 +193,5 @@ if (bgVideo) {
         }
     });
 
-    updateVideoButtons();
+    updateVideoButtonLabel();
 }
