@@ -7,7 +7,11 @@ let currentIndex = 0;
 // player score
 let score = 0;
 
-// starts the quiz when a unit is chosen
+/* Function startQuiz(unit)
+ * starts the quiz when a unit is chosen
+ * @param = unit
+ * @return = none
+ */
 function startQuiz(unit) {
 
     // hide unit info screen
@@ -37,7 +41,11 @@ function startQuiz(unit) {
     showQuestion();
 }
 
-// displays current question and answers
+/* Function showQuestion()
+ * // displays current question and answers
+ * @param = none
+ * @return = none
+ */
 function showQuestion(){
 
     // get current question object
@@ -61,7 +69,12 @@ document.getElementById("a1").onclick = () => checkAnswer(1);
 document.getElementById("a2").onclick = () => checkAnswer(2);
 document.getElementById("a3").onclick = () => checkAnswer(3);
 
-// checks if selected answer is correct
+ 
+/* Function checkAnswer(choice)
+ * checks if selected answer is correct
+ * @param = choice
+ * @return = none
+ */
 function checkAnswer(choice){
 
     let q = currentQuestions[currentIndex];
@@ -101,7 +114,12 @@ function checkAnswer(choice){
     }
 }
 
-// moves to next question
+ 
+/* Function plusIndex
+ * moves to next question
+ * @param = none
+ * @return = none
+ */
 function plusIndex(){
 
     currentIndex++; // go to next question
@@ -122,7 +140,11 @@ function plusIndex(){
     }
 }
 
-// shows info page for selected unit
+/* Function showUnitInfo(unit)
+ * shows info page for selected unit
+ * @param = unit
+ * @return = none
+ */
 function showUnitInfo(unit){
 
     document.getElementById("units").style.display = "none";
@@ -141,8 +163,11 @@ function showUnitInfo(unit){
         location.reload()
     }
 }
-
-// resets UI between questions
+/* Function reset()
+ * resets UI between questions
+ * @param = none
+ * @return = none
+ */
 function reset(){
 
     // hide messages
@@ -157,7 +182,12 @@ function reset(){
     document.getElementById("a3").style.backgroundColor = "#5588aa";
 }
 
-// disables answer buttons
+/* Function disableButtons()
+ * disables answer buttons
+ * @param = none
+ * @return = none
+ */
+ 
 function disableButtons(){
     document.getElementById("a0").disabled = true;
     document.getElementById("a1").disabled = true;
@@ -165,7 +195,11 @@ function disableButtons(){
     document.getElementById("a3").disabled = true;
 }
 
-// enables answer buttons
+/* Function enableButtons()
+ * enables answer buttons
+ * @param = none
+ * @return = none
+ */
 function enableButtons(){
     document.getElementById("a0").disabled = false;
     document.getElementById("a1").disabled = false;
