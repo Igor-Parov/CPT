@@ -182,17 +182,26 @@ function reset(){
     document.getElementById("a3").style.backgroundColor = "#5588aa";
 }
 
-/* Function disableButtons()
+/* Function disableButtons(buttonIds)
  * disables answer buttons
- * @param = none
- * @return = none
+ * @param = buttonIds 
+ * @return = number of buttons disabled
  */
  
-function disableButtons(){
-    document.getElementById("a0").disabled = true;
-    document.getElementById("a1").disabled = true;
-    document.getElementById("a2").disabled = true;
-    document.getElementById("a3").disabled = true;
+function disableButtons(buttonIds = ["a0", "a1", "a2", "a3"]){
+    let disabledCount = 0;
+
+    if (buttonIds && buttonIds.length){
+        for (let i = 0; i < buttonIds.length; i++){
+            const button = document.getElementById(buttonIds[i]);
+            if (button){
+                button.disabled = true;
+                disabledCount++;
+            }
+        }
+    }
+
+    return disabledCount;
 }
 
 /* Function enableButtons()
